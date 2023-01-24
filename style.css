@@ -1,0 +1,142 @@
+/*VARIÁVEL CSS, MELHOR PARA MANUTENÇÃO DO CÓDIGO*/
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo:  #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
+}
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+/*O "*{}" ELE PEGA TODOS OS SELETORES DO HTML E DEFINI UMA FUNÇÃO*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*QUANDO A IMAGEM FAZ SENTIDO USA A TAG HTML IMG, SE FOR SÓ DECORATIVA USAR NO CSS O BACKGROUND-IMG*/
+.principal{
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+/*A ESCALA VH, SIGNIFICA QUE IRÁ VER A DIMENSÃO DA DELA E DEFINIR O TAMANHO QUE VOCÊ COLOCOU NA TAG HTML*/
+/*DISPLAY GRID, SEPARA OS ELEMENTOS EM CADA ESPAÇO, UM DO LADO DO OUTRO OU EMBAIXO DO OUTRO*/
+/*O GRID-TEMPLATE-COLUMNS, EU DEFINIDO QUE O DISPLAY GRID IRÁ SEPARAR EM COLUNAS E NÃO EM LINHAS*/
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+/*A ESCALA EM, SEMPRE SERÁ A RELAÇÃO ENTRE O TAMANHO DA FONT, ENTÃO DE FOR 16px A FONT, A ESCALA 1em=16px*/
+/*DISPLAY BLOCK, FAZ COM QUE O ELEMENTO OCUPE A LARGURA DA TELA INTEIRA*/
+.container__botao{
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+/*ORDEM DOS VALORES DO MARGIN E DO PADDING = EM CIMA - DIREITA - BAIXO - ESQUERDA*/
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+.container__caixa{
+    margin: 0 6em
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+.descricao__texto{
+    color: var(--cinza-secundario);
+}
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+.container__descricao{
+    padding: 3em;
+}
+/* DISPLAY FLEX ELE TEM COMO PADRÃO O FLEX-DIRECTIO: ROW, QUE SERIA ORDENAR OS ELEMENTOS EM LINHA, UM DO LADO DO OUTRO*/
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+.dispositivos{
+    text-align: center;
+}
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+.lista__item{
+    font-size:32px;
+    color: var(--branco-principal);
+}
+.rodape{
+    text-align: center;
+    margin: 5em 3em;
+}
+.rodape__logo{
+    margin: 3em 0 0 0;
+}
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+.lista__link a{
+    color: var(--branco-principal);
+    text-decoration: none;
+    margin-left: 1em;
+}
+.rodape__texto{
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+.lista__link a:hover{
+    color: var(--botao-azul);
+}
+.lista__link a:active{
+    color: purple;
+}
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
